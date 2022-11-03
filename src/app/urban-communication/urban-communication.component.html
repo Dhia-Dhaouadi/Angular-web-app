@@ -1,0 +1,156 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark" style="background-color:#1a1a1a;" id="navbar">
+    <a routerLink="" class="collapse navbar-collapse" style="color: white;font-size:40px;margin-left: 100px;"><img src="assets/images/urbancommunicationlogo.png" alt="Urbancom">Urbancom</a>
+    <a routerLink="" class="navbar-toggler" style="color: white;font-size:30px;margin-left:5px;"><img src="assets/images/urbancommunicationlogo.png" alt="Urbancom">Urbancom</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" style="color: white;margin-top:5px;margin-right:20px;" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMenu()">
+        <span class="ti-menu"></span>
+    </button>
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto" id="navbar-navlist">
+                <li class="nav-item" id="navb" style="font-family: Marvel;" [ngClass]="{'active':currentSection === 'home'}">
+                    <a [ngxScrollTo]="'#home'" class="nav-link" style="font-size:20px;" routerLink="" (click)="toggleMenu()">Accueil</a>
+                </li>
+                <li class="nav-item" id="navb" style="font-family: Marvel" [ngClass]="{'active':currentSection === 'services'}">
+                    <a [ngxScrollTo]="'#services'" style="font-size:20px;" class="nav-link" routerLink="" (click)="toggleMenu()">Nos Services</a>
+                </li>
+                <li class="nav-item" id="navb" style="font-family: Marvel" [ngClass]="{'active':currentSection === 'nosprojets'}">
+                    <a [ngxScrollTo]="'#nosprojets'" style="font-size:20px;" class="nav-link" routerLink="" (click)="toggleMenu()">Nos projets</a>
+                </li>
+                <li class="nav-item" id="navb" style="font-family: Marvel" [ngClass]="{'active':currentSection === 'contact'}">
+                    <a [ngxScrollTo]="'#contact'" style="font-size:20px;" class="nav-link" routerLink="" (click)="toggleMenu()">Contact</a>
+                </li>
+                <li class="nav-item" id="navb" style="font-family: Marvel">
+                    <a class="nav-link fw-bold" style="font-size:20px;" routerLink="Blog" (click)="toggleMenu()">Blog</a>
+                </li>
+            </ul>
+            <div>
+                <ul class="text-right list-unstyled list-inline mb-0" style="margin-right:30px;background-position: center;">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/profile.php?id=100078063384775"><img src="assets/images/face.png" alt="" class="img-fluid mx-auto d-block"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/urban_communication22/"><img src="assets/images/ins.png" alt="" class="img-fluid mx-auto d-block"></a>
+                    </li>
+                    <li class="list-inline-item mb-1">
+                        <a href="https://twitter.com/UOwnerr2"><img src="assets/images/twit.png" alt="" class="img-fluid mx-auto d-block"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.tiktok.com/@urban_com?lang=fr"><img src="assets/images/tik.png" alt="" class="img-fluid mx-auto d-block"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div appScrollspy [spiedTags]="['SECTION']" (sectionChange)="onSectionChange($event)">
+    <section class="back-slide" id="home" style="background-position:center;background-color: black;">
+        <img name="silde" class="slide-img" id="isSlideImage" style="background-position:center; width: 100%;height:auto;" src="assets/images/UrbanCommunicationHome.png">
+    </section>
+    <section class="section" id="services" style="background-color: black;color:whitesmoke;">
+        <div class="row" style="margin-left: 10%;">
+            <div class="col-md-3 hover-animation">
+                <a routerLink="CommunityManager"><img class="img-back" src="assets/images/Communitymanager+.jpg" ></a>
+                <a routerLink="CommunityManager"><img class="img-front" src="assets/images/Communitymanager.jpg" ></a>
+              </div>
+              <div class="col-md-3 hover-animation">
+                <a routerLink="Phoning"><img class="img-back" src="assets/images/Phoning+.jpg" ></a>
+                <a routerLink="Phoning"><img class="img-front" src="assets/images/Phoning.jpg" ></a>
+              </div>
+              <div class="col-md-3 hover-animation">
+                <a routerLink="GraphicDesign"><img class="img-back" src="assets/images/DesignGraphic+.jpg" ></a>
+                <a routerLink="GraphicDesign"><img class="img-front" src="assets/images/DesignGraphic.jpg" ></a>
+              </div>
+              <div class="col-md-3 hover-animation">
+                <a routerLink="WebDeveloppement"><img class="img-back" src="assets/images/WebDevelopment+.jpg" ></a>
+                <a routerLink="WebDeveloppement"><img class="img-front" src="assets/images/WebDevelopment.jpg" ></a>
+              </div>
+    </div>
+    </section>
+    <section class="section" id="nosprojets" style="background-color: black;color:whitesmoke;margin-top:0%;">
+            <div class="row align-items-center">
+                    <div class="col-lg-3 mt-lg-0 mt-4">
+                        <a routerLink="Urbanfoods" ><img src="assets/images/urban foods/urbanfood.jpg" class="img-fluid mx-auto d-block" />
+                            <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Urbanfoods</p></a>
+                            <a routerLink="Benjdida"><img src="assets/images/ben jdida/benjdida3.jpg" class="img-fluid mx-auto d-block" />
+                                <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Ben Jdida</p></a>
+                                <a routerLink="Nour"><img src="assets/images/nour/nour7.jpg" class="img-fluid mx-auto d-block" />
+                                    <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Nour</p></a>
+
+                    </div>
+                    <div class="col-lg-3 mt-lg-0 mt-4">
+                    <a routerLink="Usinecentrale"><img src="assets/images/usine centrale/Usinecentrale.jpg" class="img-fluid mx-auto d-block" />
+                        <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Usine Centrale</p></a>
+                        <a routerLink="Crispy"><img src="assets/images/crispy eats/crispy10.jpg" class="img-fluid mx-auto d-block" />
+                            <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Crispy eats</p></a>
+                            <a routerLink="Cureacoeur"><img src="assets/images/cure a coeur/curecoeur.jpg" class="img-fluid mx-auto d-block" />
+                                <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Cure à cœur</p></a>
+
+                    </div>    
+                    <div class="col-lg-3 mt-lg-0 mt-4">
+                        <a routerLink="Laromate"><img src="assets/images/laromate/laromate.png" class="img-fluid mx-auto d-block" />
+                            <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">L'aromate</p></a>
+                            <a routerLink="Chillout"><img src="assets/images/chillout/chillout3.png" class="img-fluid mx-auto d-block" />
+                                <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Chillout</p></a>
+                                <a routerLink="Tiffservices"><img src="assets/images/tiff services/tiff.jpg" class="img-fluid mx-auto d-block" />
+                                    <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Tiff services</p></a>
+                    </div>
+                <div class="col-lg-3 mt-lg-0 mt-4">
+                    <a routerLink="Hennecheimouma"><img src="assets/images/henne chimouma/henne6.jpg" class="img-fluid mx-auto d-block" />
+                        <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Henne Cheimouma</p></a>
+                        <a routerLink="Butcher"><img src="assets/images/butcher/butcher.png" class="img-fluid mx-auto d-block" />
+                            <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Butcher</p></a>
+                            <a routerLink="Menzili"><img src="assets/images/menzili/menzili.jpg" class="img-fluid mx-auto d-block" />
+                                <p class="testi-user-name text-center text-white mb-0 mt-1" style="color:white;font-family: Marvel;font-size:20px">Menzili</p></a>
+
+                </div>
+            </div>
+    </section>
+    <section class="section" style="background-color: black;color:whitesmoke;margin-top:0%;" id="contact">     
+            <div class="row align-items-center" style="margin-left:5%">
+                <div class="col-lg-3 mt-lg-0 mt-4">
+                    <a href="https://wa.me/58172694"><img src="assets/images/whatsapp.png"></a>
+                    <a href="https://www.tiktok.com/@urban_com?lang=fr"><img src="assets/images/tiktok.png"></a>
+                </div>
+                <div class="col-lg-3 mt-lg-0 mt-4">
+                    <a href="https://www.facebook.com/profile.php?id=100078063384775"><img src="assets/images/facebook.png"></a>
+                    <a href="https://twitter.com/UOwnerr2"><img src="assets/images/twitt.png"></a>
+                </div>
+            <div class="col-lg-3 mt-lg-0 mt-4">
+                <a href="https://www.instagram.com/urban_communication22/"><img src="assets/images/instagram.png"></a>
+                <a href="https://www.behance.net/urbancommunication?tracking_source=search_users|urban%20communication"><img src="assets/images/behance.png"></a>
+            </div>
+            <div class="col-lg-3 mt-lg-0 mt-4">
+                <a href="mailto: Agencemarketing@urbancommunication.net"><img src="assets/images/email.png"></a>
+                <a href="https://www.linkedin.com/company/urbancomagence/"><img src="assets/images/linkedin.png"></a>
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+    <app-switcher></app-switcher>
+</div>
+<style>
+.hover-animation {
+    position: relative;
+    width: 294px;
+    height: 480px;
+    display: inline;
+
+  }
+  
+  .hover-animation img {
+    position: absolute;
+    left: 0;
+    width: 294px;
+    height: 480px;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+  .hover-animation img.img-front:hover{
+    opacity:0;
+    cursor: pointer;
+    display: inline;
+  }
+</style>
